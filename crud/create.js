@@ -1,7 +1,6 @@
 const { v4: uuidv4 } = require("uuid");
-const db = require("../db");
 
-const create = (table, data, primaryKey = "id") => {
+const create = (db, table, data, primaryKey = "id") => {
   return new Promise((resolve, reject) => {
     // Automatically generate primary key if not provided
     if (!data[primaryKey]) {

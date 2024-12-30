@@ -1,6 +1,4 @@
-const db = require("../db");
-
-const read = (table, conditions = {}) => {
+const read = (db, table, conditions = {}) => {
   return new Promise((resolve, reject) => {
     const keys = Object.keys(conditions)
       .map((key) => `${key} = ?`)

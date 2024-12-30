@@ -19,22 +19,22 @@ class EdaMoneSQL {
   }
 
   // Create Function
-  create(table, data) {
+  moneAdd(table, data) {
     return create(this.db, table, data);
   }
 
   // Read Function
-  read(table, conditions) {
+  moneRead(table, conditions) {
     return read(this.db, table, conditions);
   }
 
   // Update Function
-  update(table, data, conditions) {
+  moneUpdate(table, data, conditions) {
     return update(this.db, table, data, conditions);
   }
 
   // Delete Function
-  delete(table, conditions) {
+  moneDelete(table, conditions) {
     return del(this.db, table, conditions);
   }
 }

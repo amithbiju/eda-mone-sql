@@ -1,6 +1,4 @@
-const db = require("../db");
-
-const update = (table, data, conditions) => {
+const update = (db, table, data, conditions) => {
   return new Promise((resolve, reject) => {
     const updates = Object.keys(data)
       .map((key) => `${key} = ?`)
