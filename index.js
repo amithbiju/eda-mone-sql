@@ -4,7 +4,7 @@ const update = require("./crud/update");
 const del = require("./crud/delete");
 const mysql = require("mysql2");
 
-class EdaMonESQL {
+class EdaMoneSQL {
   constructor(config) {
     this.db = mysql.createConnection(config);
 
@@ -39,4 +39,4 @@ class EdaMonESQL {
   }
 }
 
-module.exports = EdaMonESQL;
+module.exports = EdaMoneSQL;
