@@ -24,9 +24,13 @@ const create = (db, table, data, primaryKey = "id") => {
       }
     };
 
+    // Create column definitions excluding primaryKey from the columns list
     const columns = Object.keys(data)
+      .filter((key) => key !== primaryKey)
       .map((key) => `${key} ${inferDataType(data[key])}`)
       .join(", ");
+
+    // Generate the CREATE TABLE query
     const createTableSQL = `CREATE TABLE IF NOT EXISTS ${table} (${primaryKey} VARCHAR(255) PRIMARY KEY, ${columns})`;
 
     // Execute the query to ensure the table exists

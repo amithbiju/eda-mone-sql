@@ -1,7 +1,7 @@
 const create = require("./crud/create");
 const read = require("./crud/read");
 const update = require("./crud/update");
-const del = require("./crud/delete");
+const { del, delAll } = require("./crud/delete");
 const mysql = require("mysql2");
 
 class EdaMoneSQL {
@@ -40,6 +40,10 @@ class EdaMoneSQL {
   // Delete Function
   edaMoneDelete(table, conditions) {
     return del(this.db, table, conditions);
+  }
+  // Delete table
+  edaMoneDeleteTable(table) {
+    return delAll(this.db, table);
   }
 }
 
