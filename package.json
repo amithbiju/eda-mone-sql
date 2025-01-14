@@ -1,5 +1,5 @@
 {
-  "name": "eda-mone-sql",
+  "name": "eda-mone-mysql",
   "version": "1.0.2",
   "description": "EdaMoneSQL is a lightweight fun project, easy-to-use MySQL helper library for Node.js. It provides a simple interface for performing CRUD operations (`Create`, `Read`, `Update`, `Delete`) using JavaScript functions without writing raw SQL queries.",
   "main": "index.js",
